@@ -1,0 +1,230 @@
+﻿body{
+  padding: 0;
+  margin:  0 auto;
+  height: 1vh;
+}
+.contenedor{
+  margin: 0px;
+  padding:0px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns:  1fr;
+  grid-template-rows: 240px 1fr 70px;
+  grid-template-areas: 
+  "header header header"
+  "main main"
+  "footer footer footer";
+}
+
+.contenedor header,
+.contenedor main,
+.contenedor footer{
+  padding: 20px;
+  background-color: white;
+  border: 4px solid black;
+}
+
+.contenedor header,
+.contenedor footer{
+  background-color: grey;
+}
+
+.contenedor header{
+  border-bottom:0;
+}
+
+
+.contenedor main{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+}
+}
+
+
+
+
+
+main .card{
+  min-width: 400px;
+}
+
+main .userlogo{
+  min-width: 200px;
+}
+
+body form input{
+  border: 1px solid #000
+}
+
+ form {
+	display: flex;
+	flex-direction: row;
+  flex-flow: row wrap;
+	align-items: flex-start;
+  justify-content: flex-start;
+}
+
+form .field {
+  width: 80%;
+  margin: 20px 20px 20px 30px;
+	padding: 12px 16px;
+	border: 1px solid #000;
+	outline: none;
+}
+  
+ form .submit-button {
+  width: 92.5%;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: 900;
+  transition: all ease 0.2s;
+  text-decoration:none;
+  box-shadow:  1px 1px 0px 2px black;
+}
+main form .submit-button:hover {
+}
+form .field:active {
+	box-shadow: inset 0 2px 0 0 rgba(0, 0, 0, 0.1),
+	inset 0 2px 2px 2px rgba(0, 0, 0, 0.2),
+	inset 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+main form{
+  width: 100%;
+  height: 200px;
+  max-width: 1000px;
+  display: grid;
+  margin: 0 30px 30px 30px;
+  grid-template-columns:  1fr 1fr;
+  grid-template-rows: 1fr 60px;
+  grid-template-areas: 
+  "grupo-1 grupo-2"
+  "grupo-3 grupo-3";
+  align-items: end;
+}
+
+main form #grupo-1{
+  border: 1px solid #000;
+  border-right: none;
+  padding-left: 2%;
+}
+
+main form #grupo-2{
+  border: 1px solid #000;
+  border-left: none;
+}
+
+main form #grupo-3{
+  grid-column: 1 / end;
+  align-self: flex-end;
+  row-gap: 40px;
+  width: 108%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    display:  grid;
+    /* width: 100%;
+    max-width: 1706px; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+header .title{
+  grid-row: 1 / 2;
+  grid-column: 1 / end;
+  text-align: center;
+}
+header .iconos{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+/*   padding-left: 10px;
+  height: 50px; */
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+header #icono1, #icono2, #icono3, #icono4{
+  justify-self: end;
+}
+header .iconos img{
+  width: 41px;
+  float: left;
+  padding: 0 5px;
+}
+header .casa img{
+  padding: 6px 5px;
+}
+ header .flecha img{
+   padding-top: 12px;
+ }
+
+header .card{
+  grid-column:  2 / end;
+  grid-row: 2 / end;
+  height: 41x;
+}
+.userlogo img{
+  width: 100%;
+  max-width: 200px;
+}
+
+header form #user{
+  width: 76%;
+}
+header form  #search{
+  width: 10%;
+  border-radius: 5px;
+  background: url("./lupa.jpg") no-repeat no-repeat;
+  background-size: 42%;
+  background-color: white;
+}
+header form  #search:focus{
+  background: url("");
+  background-color: white;
+}
+
+@media screen and (max-width:1100px) {
+  main form{
+    width: auto;
+  }
+  form .field{
+    width: 70%;
+  }
+}
+@media screen and (max-width:761px) {
+  header .card{
+    height: auto;
+  }
+  header .iconos{
+    grid-column: 1 / 3;
+  }
+  header .card{
+    grid-column: 3 / end;
+  }
+}
+@media screen and (max-width:700px) {
+  form .field{
+    width: auto;
+  }
+}
